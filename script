@@ -2,7 +2,7 @@
 # paste that script on client side
 public action start() {
     # space DIV
-	GAME.UI.addDIV(" ", true, "position: absolute;top: 94%;left: calc(50% + 40px);width: 130px;height: 50px;background-color: #8787875e;" +
+    GAME.UI.addDIV(" ", true, "position: absolute;top: 94%;left: calc(50% + 40px);width: 130px;height: 50px;background-color: #8787875e;" +
     "border: solid #3a3a3ae0 5px;transform: translate(-50%, -50%);border-radius: 15px;");
     # w DIV
     GAME.UI.addDIV("w", true, "position: absolute;top: calc(94% - 160px);left: 50%;width: 50px;height: 50px;background-color: #8787875e;" +
@@ -24,23 +24,23 @@ public action start() {
 
 # Player update
 public action onPlayerUpdate(str id, num delta, obj inputs) {
-	if (!!(bool)inputs.crouch) {
-		GAME.UI.updateDIV("crouch", "background-color", "#6cd3749c");
-	}
+    if (!!(bool)inputs.crouch) {
+        GAME.UI.updateDIV("crouch", "background-color", "#6cd3749c");
+    }
     else {
-		GAME.UI.updateDIV("crouch", "background-color", "#8787875e");
+	GAME.UI.updateDIV("crouch", "background-color", "#8787875e");
     }
 
 }
 
 # User pressed a key
 public action onKeyPress(str key, num code) {
-	GAME.UI.updateDIV(key, "background-color", "#6cd3749c");
+    GAME.UI.updateDIV(key, "background-color", "#6cd3749c");
 
 }
 
 # User released a key
 public action onKeyUp(str key, num code) {
-	GAME.UI.updateDIV(key, "background-color", "#8787875e");
+    GAME.UI.updateDIV(key, "background-color", "#8787875e");
 
 }
